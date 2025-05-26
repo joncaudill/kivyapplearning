@@ -8,13 +8,9 @@ from kivy.properties import NumericProperty
 
 
 class GameScreen(Widget):
-    label_text = StringProperty("")
-    numeric = NumericProperty(0)
 
-    def __init__(self, **kwargs):
-        super(GameScreen, self).__init__(**kwargs)
-        self.label_text = "Here is some text"
-        self.numeric = 42
+    def press_button(self):
+        print("Button pressed!")
 
 class LanguageLearnerApp(App):
     def build(self):

@@ -5,12 +5,19 @@ from kivy.uix.label import Label
 from kivy.uix.image import Image
 from kivy.properties import StringProperty
 from kivy.properties import NumericProperty
+from kivy.core.window import Window
 
+Window.clearcolor = (1, 1, 1, 1)  # Set background color to white
+Window.size = (400, 600)  # Set window size
+
+class ImageBox(Widget):
+    pass
+
+class ProgressBar(Widget):
+    pass
 
 class GameScreen(Widget):
-
-    def press_button(self):
-        print("Button pressed!")
+    pass
 
 class LanguageLearnerApp(App):
     def build(self):

@@ -31,7 +31,7 @@
             text_size: self.size
             halign: 'left'
             font_size: 30
-            text: 'Your score: 10'
+            text: 'Your score: ' + str(self.parent.parent.final_score)
         Label:
             pos_hint: {'x': .1, 'y': .4}
             size_hint: .8, .1
@@ -40,7 +40,7 @@
             text_size: self.size
             halign: 'left'
             font_size: 30
-            text: 'High score: 12'
+            text: 'High score: ' + str(self.parent.parent.high_score)
         Button:
             pos_hint: {'x': .1, 'y': .1}
             size_hint: .8, .15
@@ -63,7 +63,7 @@
             rgba: 0, 0.5, 0.2, 1
         Rectangle:
             pos: self.x + 5, self.y + 5
-            size: (self.width / 2) - 10, self.height - 10
+            size: self.parent.parent.bar_width, self.height - 10
         Color: 
             rgba: 1, 1, 1, 1
         BorderImage:
